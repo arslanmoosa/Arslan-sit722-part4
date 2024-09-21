@@ -9,8 +9,9 @@ set -euo pipefail
 # echo "KUBECONFIG is set to: $KUBECONFIG"
 
 az login
+echo "login successful"
 kubectl apply -f ./scripts/kubernetes/deployment.yaml
-
+echo "applied"
 # Get the status of pods, services, and deployments
 kubectl get pods
 kubectl get services
