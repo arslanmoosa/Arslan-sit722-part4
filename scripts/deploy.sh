@@ -10,6 +10,8 @@ set -euo pipefail
 
 az login
 echo "login successful"
+az aks get-credentials --resource-group deakinuni --name amkubpart4 --overwrite-existing
+echo "Connected to azure kubernetes "
 docker images
 envsubst < ./scripts/kubernetes/deployment.yaml | kubectl apply -f -
 echo "applied"
