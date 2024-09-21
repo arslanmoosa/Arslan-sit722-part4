@@ -6,6 +6,7 @@ set -u # or set -o nounset
 : "$REGISTRY_PW"
 
 docker login ampart4.azurecr.io -u ampart4 -p JeLcwwrbB/TQFuqivqZgeKb174S1g78aijFVVphfnI+ACRBnZJQD
+docker images
 docker tag book-catalog-service ampart4.azurecr.io/book-catalog-service
 
 docker tag inventory-management-service ampart4.azurecr.io/inventory-management-service
