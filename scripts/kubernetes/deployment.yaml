@@ -16,7 +16,7 @@ spec:
       containers:
       - name: book-catalog
         image: ampart4.azurecr.io/book-catalog-service:latest
-         imagePullPolicy: Always
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         env:
