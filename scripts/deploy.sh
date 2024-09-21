@@ -2,6 +2,7 @@ set -euo pipefail
 
 
 az login
+az acr login -n ampart4
 echo "login successful"
 az aks get-credentials --resource-group deakinuni --name amkubpart4 --overwrite-existing
 echo "Connected to azure kubernetes "

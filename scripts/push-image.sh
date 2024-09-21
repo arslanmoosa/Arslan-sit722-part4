@@ -7,8 +7,8 @@ set -u # or set -o nounset
 
 docker login ampart4.azurecr.io -u ampart4 -p JeLcwwrbB/TQFuqivqZgeKb174S1g78aijFVVphfnI+ACRBnZJQD
 docker images
-docker tag ampart4.azurecr.io/book-catalog-service ampart4.azurecr.io/book-catalog-service
+docker tag book-catalog-service ampart4.azurecr.io/book-catalog-service
 
-docker tag ampart4.azurecr.io/inventory-management-service ampart4.azurecr.io/inventory-management-service
+docker tag inventory-management-service ampart4.azurecr.io/inventory-management-service
 docker push ampart4.azurecr.io/book-catalog-service:latest
 docker push ampart4.azurecr.io/inventory-management-service:latest
