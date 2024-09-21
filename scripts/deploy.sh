@@ -11,6 +11,7 @@ echo "applied"
 echo "---------------------------------"
 echo "repository table"
 az acr repository list --name ampart4 --output table
+kubectl config current-context
 echo "Delaying 20 seconds to get the deployments done"
 sleep 20
 
