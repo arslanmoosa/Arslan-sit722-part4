@@ -29,3 +29,5 @@ jobs:
             version: v1.24.2
       - name: Deploy
         run: ./scripts/deploy.sh
+      - name: Delete
+        run: ./scripts/delete.sh  

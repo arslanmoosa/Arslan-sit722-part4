@@ -60,7 +60,7 @@ spec:
         - containerPort: 8089
         env:
         - name: PORT
-          value: "8082"
+          value: "8089"
         - name: DATABASE_URL
           value: "postgresql://arslan_moosa_db_7_2_part4_user:W6kze7sSHnLOe4lyZgw0z2VAPJG1rynd@dpg-crmtmr56l47c73fu9i6g-a.oregon-postgres.render.com/arslan_moosa_db_7_2_part4"
 ---
