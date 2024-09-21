@@ -10,6 +10,7 @@ set -euo pipefail
 
 az login
 echo "login successful"
+docker images
 kubectl apply -f ./scripts/kubernetes/deployment.yaml
 echo "applied"
 # Get the status of pods, services, and deployments
