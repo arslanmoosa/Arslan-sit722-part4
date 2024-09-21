@@ -16,9 +16,11 @@ spec:
       - name: book-catalog
         image: ampart4.azurecr.io/book-catalog-service:latest
         imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
         env:
         - name: PORT
-          value: "8081"
+          value: "8000"
         - name: DATABASE_URL
           value: "postgresql://arslan_moosa_db_7_2_part4_user:W6kze7sSHnLOe4lyZgw0z2VAPJG1rynd@dpg-crmtmr56l47c73fu9i6g-a.oregon-postgres.render.com/arslan_moosa_db_7_2_part4"
 ---
@@ -32,8 +34,8 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 8088
-      targetPort: 8081
+      port: 8000
+      targetPort: 8000
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -54,10 +56,10 @@ spec:
         image: ampart4.azurecr.io/inventory-management-service:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8082
+        - containerPort: 8001
         env:
         - name: PORT
-          value: "8082"
+          value: "8001"
         - name: DATABASE_URL
           value: "postgresql://arslan_moosa_db_7_2_part4_user:W6kze7sSHnLOe4lyZgw0z2VAPJG1rynd@dpg-crmtmr56l47c73fu9i6g-a.oregon-postgres.render.com/arslan_moosa_db_7_2_part4"
 ---
@@ -71,5 +73,5 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 8089
-      targetPort: 8082
+      port: 8001
+      targetPort: 8001
