@@ -11,8 +11,10 @@ echo "applied"
 echo "---------------------------------"
 echo "repository table"
 az acr repository list --name ampart4 --output table
-echo "Delaying 60 seconds to get the deployments done"
-sleep 60
+echo "Delaying 20 seconds to get the deployments done"
+sleep 20
+
 kubectl get pods
+kubectl logs book-catalog-7c4f6b886-sftjx
 kubectl get services
 kubectl get deployments
